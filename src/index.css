@@ -1,0 +1,148 @@
+/* Nha khoa ABC - Main theme: Xanh đậm (#0f4c5c) + Trắng xám (#f8f9fa #e9ecef) */
+
+:root {
+    --primary-dark: #0f4c5c;
+    /* Xanh đậm chủ đạo */
+    --primary-dark-hover: #0b3a46;
+    --secondary-light: #f8f9fa;
+    /* Trắng xám sáng */
+    --gray-light: #e9ecef;
+    --gray-medium: #dee2e6;
+    --white: #ffffff;
+    --text-dark: #2c3e50;
+    --text-light: #6c757d;
+    --success: #28a745;
+    --warning: #ffc107;
+    --danger: #dc3545;
+    --shadow: 0 4px 12px rgba(15, 76, 92, 0.15);
+    --shadow-hover: 0 8px 25px rgba(15, 76, 92, 0.2);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--secondary-light);
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+.container-fluid,
+.container {
+    max-width: 1400px;
+}
+
+/* Navbar custom */
+.navbar {
+    background: linear-gradient(135deg, var(--primary-dark), var(--primary-dark-hover)) !important;
+    box-shadow: var(--shadow);
+}
+
+.navbar-brand {
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+/* Hero section */
+.hero {
+    background: linear-gradient(135deg, var(--primary-dark), var(--primary-dark-hover));
+    color: var(--white);
+}
+
+.hero h1 {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Cards */
+.card {
+    border: none;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    background: var(--white);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+}
+
+.card-img-top {
+    border-radius: 15px 15px 0 0;
+}
+
+/* Buttons */
+.btn-primary {
+    background: var(--primary-dark);
+    border-color: var(--primary-dark);
+    border-radius: 25px;
+    padding: 10px 25px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background: var(--primary-dark-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(15, 76, 92, 0.4);
+}
+
+/* Tables */
+.table {
+    background: var(--white);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+/* Forms */
+.form-control,
+.form-select,
+.form-control:focus {
+    border-radius: 10px;
+    border: 2px solid var(--gray-light);
+    padding: 12px 15px;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: var(--primary-dark);
+    box-shadow: 0 0 0 0.2rem rgba(15, 76, 92, 0.15);
+}
+
+/* Chat bot */
+.chat-bot {
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--gray-light);
+}
+
+/* Footer */
+footer {
+    background: var(--primary-dark);
+    color: var(--white);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .card {
+        margin-bottom: 2rem;
+    }
+}
+
+/* Smooth scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Loading spinner */
+.spinner-border {
+    color: var(--primary-dark);
+}
