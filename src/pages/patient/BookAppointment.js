@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Container, Row, Col, Spinner } from 'react-bootstrap';
 import { useParams } from 'react-router-dom';
-import DoctorCard from '../components/DoctorCard';
-import AppointmentForm from '../components/AppointmentForm';
-import { doctorService } from '../services/doctorService';
+import DoctorCard from '../../components/DoctorCard';
+import AppointmentForm from '../../components/AppointmentForm';
+import { doctorService } from '../../services/doctorService';
 
 const BookAppointment = () => {
     const { doctorId } = useParams();

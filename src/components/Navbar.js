@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../context/AuthContext';
 import { Navbar as BSNavbar, Nav, Container, Button } from 'react-bootstrap';
-import { FaUser, FaSignOutAlt, FaHome } from 'react-icons/fa';
+import { FaUser, FaSignOutAlt } from 'react-icons/fa';
 
 const Navbar = () => {
     const { user, logout } = useContext(AuthContext);
@@ -11,6 +11,7 @@ const Navbar = () => {
     const handleLogout = () => {
         logout();
         navigate('/');
+        window.location.reload();
     };
 
     return (
@@ -27,6 +28,7 @@ const Navbar = () => {
                         {user && (
                             <>
                                 <Nav.Link as={Link} to="/book">Đặt Lịch</Nav.Link>
+                                {user.role === 'patient' && <Nav.Link as={Link} to="/my-appointments">Lịch Khám Của Tôi</Nav.Link>}
                                 {user.role === 'doctor' && <Nav.Link as={Link} to="/doctor-dashboard">Dashboard</Nav.Link>}
                                 {user.role === 'staff' && <Nav.Link as={Link} to="/staff-dashboard">Staff</Nav.Link>}
                             </>
@@ -35,7 +37,7 @@ const Navbar = () => {
                     <Nav>
                         {user ? (
                             <>
-                                <Nav.Link><FaUser /> {user.name}</Nav.Link>
+                                <Nav.Link as={Link} to="/profile"><FaUser /> {user.name}</Nav.Link>
                                 <Button variant="outline-light" onClick={handleLogout}><FaSignOutAlt /> Logout</Button>
                             </>
                         ) : (

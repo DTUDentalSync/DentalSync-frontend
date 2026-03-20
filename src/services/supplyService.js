@@ -8,8 +8,9 @@ API.interceptors.request.use((req) => {
     return req;
 });
 
-export const chatService = {
-    sendMessage: (message) => API.post('/chat/message', { message }),
-    getHistory: () => API.get('/chat/history')
+export const supplyService = {
+    getAll: () => API.get('/supplies'),
+    create: (data) => API.post('/supplies', data),
+    update: (id, data) => API.put(`/supplies/${id}`, data),
+    delete: (id) => API.delete(`/supplies/${id}`)
 };
-

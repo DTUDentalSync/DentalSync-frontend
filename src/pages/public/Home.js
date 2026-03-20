@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Container, Row, Col, Carousel, Button } from 'react-bootstrap';
-import DoctorCard from '../components/DoctorCard';
-import { doctorService } from '../services/doctorService';
-import ChatBotAI from '../components/ChatBotAI';
+import DoctorCard from '../../components/DoctorCard';
+import { doctorService } from '../../services/doctorService';
+import ChatBotAI from '../../components/ChatBotAI';
 
 const Home = () => {
     const [doctors, setDoctors] = useState([]);
