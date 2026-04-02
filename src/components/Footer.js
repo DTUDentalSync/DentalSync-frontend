@@ -3,7 +3,7 @@ import { Container, Row, Col } from 'react-bootstrap';
 
 const Footer = () => {
     return (
-        <footer className="bg-dark text-light py-4 mt-5">
+        <footer id="lien-he" className="footer-landing py-5 mt-0">
             <Container>
                 <Row>
                     <Col md={4}>
@@ -13,8 +13,9 @@ const Footer = () => {
                     <Col md={4}>
                         <h6>Liên kết</h6>
                         <ul className="list-unstyled">
-                            <li><a href="/" className="text-light">Home</a></li>
-                            <li><a href="/doctors" className="text-light">Tìm bác sĩ</a></li>
+                            <li><a href="/">Trang chủ</a></li>
+                            <li><a href="/doctors">Tìm bác sĩ</a></li>
+                            <li><a href="/#dich-vu">Dịch vụ</a></li>
                         </ul>
                     </Col>
                     <Col md={4}>
@@ -23,7 +24,7 @@ const Footer = () => {
                     </Col>
                 </Row>
                 <hr />
-                <p className="text-center mb-0">&copy; 2024 KLTN. All rights reserved.</p>
+                <p className="text-center mb-0 opacity-75">&copy; {new Date().getFullYear()} Nha Khoa NVL — KLTN.</p>
             </Container>
         </footer>
     );

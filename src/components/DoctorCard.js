@@ -13,8 +13,8 @@ const DoctorCard = ({ doctor }) => {
                     variant="top"
                     height="200"
                     className="object-fit-cover"
-                    src={doctor.userId?.avatar || "https://images.unsplash.com/photo-1593504614681-82c7646f85f0?w=300&h=300&fit=crop&crop=face"}
-                    onError={(e) => { e.target.onerror = null; e.target.src="https://images.unsplash.com/photo-1593504614681-82c7646f85f0?w=300&h=300&fit=crop&crop=face" }}
+                    src={doctor.userId?.avatar || "https://blob.khoav4.com/1733804518305-9f81666e83e9a49f1c11fa0961fe220d.jpg"}
+                    onError={(e) => { e.target.onerror = null; e.target.src = "https://blob.khoav4.com/1733804518305-9f81666e83e9a49f1c11fa0961fe220d.jpg" }}
                     alt="Nha sĩ"
                 />
                 <Card.Body>

@@ -34,8 +34,8 @@ const DoctorDetail = () => {
                         <Row className="g-0">
                             <Col md={5} className="bg-light text-center p-4 d-flex flex-column justify-content-center align-items-center">
                                 <img
-                                    src={doctor.userId?.avatar || "https://images.unsplash.com/photo-1593504614681-82c7646f85f0?w=400&h=400&fit=crop&crop=face"}
-                                    onError={(e) => { e.target.onerror = null; e.target.src="https://images.unsplash.com/photo-1593504614681-82c7646f85f0?w=400&h=400&fit=crop&crop=face" }}
+                                    src={doctor.userId?.avatar || "https://blob.khoav4.com/1733804518305-9f81666e83e9a49f1c11fa0961fe220d.jpg"}
+                                    onError={(e) => { e.target.onerror = null; e.target.src="https://blob.khoav4.com/1733804518305-9f81666e83e9a49f1c11fa0961fe220d.jpg" }}
                                     alt="Doctor Avatar"
                                     className="img-fluid rounded-circle mb-3 shadow-sm"
                                     style={{ width: '200px', height: '200px', objectFit: 'cover', border: '5px solid #fff' }}
