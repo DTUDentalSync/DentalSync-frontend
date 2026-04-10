@@ -113,6 +113,15 @@ const Navbar = () => {
                     <Nav className="align-items-lg-center gap-2 ms-lg-2">
                         {user ? (
                             <>
+                                {user.role === 'patient' && (
+                                    <Button
+                                        as={Link}
+                                        to="/book"
+                                        className="rounded-pill px-3 px-lg-4 d-flex align-items-center gap-2 btn-landing-orange border-0 d-none d-lg-flex"
+                                    >
+                                        <FaCalendarAlt /> Đặt Lịch Hẹn
+                                    </Button>
+                                )}
                                 <Nav.Link as={Link} to="/profile" className="landing-nav-item text-white d-flex align-items-center gap-2 px-3">
                                     <FaUser /> <span className="text-truncate" style={{ maxWidth: '8rem' }}>{user.name}</span>
                                 </Nav.Link>

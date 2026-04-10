@@ -11,6 +11,7 @@ import ManagePatients from '../pages/admin/ManagePatients';
 import ManageDoctors from '../pages/admin/ManageDoctors';
 import ManageAppointments from '../pages/admin/ManageAppointments';
 import PatientAppointments from '../pages/patient/PatientAppointments';
+import GeneralBooking from '../pages/patient/GeneralBooking';
 import ManageSupplies from '../pages/admin/ManageSupplies';
 import Profile from '../pages/shared/Profile';
 import DoctorDetail from '../pages/patient/DoctorDetail';
@@ -30,6 +31,7 @@ const AppRoutes = () => {
             <Route path="/doctors" element={<DocterSearch />} />
             <Route path="/doctor/:id" element={<DoctorDetail />} />
             <Route path="/book/:doctorId" element={<BookAppointment />} />
+            <Route path="/book" element={user?.role === 'patient' ? <GeneralBooking /> : <Navigate to="/login" />} />
 
             <Route path="/doctor-dashboard" element={user?.role === 'doctor' ? <DoctorDashboard /> : <Navigate to="/login" />} />
             <Route path="/staff-dashboard" element={user?.role === 'staff' ? <StaffDashboard /> : <Navigate to="/login" />} />
